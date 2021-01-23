@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Tajawal");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  src: url("../fonts/droid-font.ttf");
+  font-family: 'droid-font';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  font-family: "Tajawal";
+  background: none;
+  color: #333333;
+}
+
+.root {
+  padding-top: 50px;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .signup-container {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.3);
+          box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.3);
+  height: 500px;
+  margin: 15px;
+}
+
+.root .signup-container .left {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .signup-container .left .left__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .signup-container .left .left__img img {
+  width: 200px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.root .signup-container .left .left__img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.root .signup-container .signup {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Tajawal";
+  padding: 10px 20px;
+}
+
+.root .signup-container .signup h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.root .signup-container .signup .form-row input {
+  background-color: #E7E7E7;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  padding: 8px 15px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.root .signup-container .signup .form-row input:focus {
+  -webkit-box-shadow: 0px 0px 15px rgba(65, 88, 208, 0.7);
+          box-shadow: 0px 0px 15px rgba(65, 88, 208, 0.7);
+}
+
+.root .signup-container .signup .btn-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.root .signup-container .signup .btn-row .btn-signup {
+  border: none;
+  outline: none;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.root .signup-container .signup .btn-row .btn-signup:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+          box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+}
+
+.root .signup-container .signup .btn-row .btn-signup:active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+@media (max-width: 750px) {
+  .root .signup-container .left {
+    display: none;
+  }
+  .root .signup-container .signup {
+    width: 100%;
+  }
+}
+
+.errors {
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  width: 300px;
+  margin-top: 60px;
+}
+
+.errors div {
+  font-size: 16px;
+  width: 100%;
+}
+/*# sourceMappingURL=signup.css.map */
