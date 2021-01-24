@@ -38,15 +38,23 @@
         <li class="navbar-link">
             <a href="#" class="link">Products</a>
         </li>
-        <li class="navbar-link">
-            <a href="login" class="link">
-                Login
-            </a>
-        </li>
-        <li class="navbar-link">
-            <a href="signup" class="link">
-                Signup
-            </a>
-        </li>
+        <?php
+            session_start();
+            if(@!$_SESSION['u_id']){
+        ?>
+                <li class="navbar-link">
+                    <a href="login" class="link">
+                        Login
+                    </a>
+                </li>
+                <li class="navbar-link">
+                    <a href="signup" class="link">
+                        Signup
+                    </a>
+                </li>
+        <?php
+            }
+        ?>
+       
     </ul>
 </div>

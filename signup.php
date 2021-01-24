@@ -14,6 +14,12 @@
 <body>
     
     <?php
+    session_start();
+    if(@$_SESSION['u_id']){
+        header('location: index');
+    }else{
+
+    
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -106,5 +112,10 @@
     </div>
 
     <script src="files/pro/js/pro.js"></script>
+
+
+    <?php
+    }
+    ?>
 </body>
 </html>

@@ -14,12 +14,157 @@
 
 .navbar {
   font-family: "Tajawal";
-  background: none;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
   color: #333333;
 }
 
 .root {
   padding-top: 50px;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.root .left-side {
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+.root .left-side .header {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+}
+
+.root .left-side .header .header__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.root .left-side .header .header__img .img {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .left-side .header .header__img .img img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.root .left-side .header .header__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+}
+
+.root .left-side .header .header__name .name {
+  font-family: "Tajawal";
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.root .left-side .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Tajawal";
+}
+
+.root .left-side .content .content__user-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.root .left-side .content .content__user-bio .bio__title {
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.root .left-side .content .content__user-bio .bio__title .title {
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.root .left-side .content .content__user-bio .bio {
+  padding: 0px 10px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.root .left-side .content .content__user-links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0px 10px;
+}
+
+.root .left-side .content .content__user-links .user-links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.root .left-side .content .content__user-links .user-links .user-link {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.root .left-side .content .content__user-links .user-links .user-link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=profile.css.map */

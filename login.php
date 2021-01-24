@@ -13,8 +13,13 @@
 </head>
 <body>
     
-    <?php
-        session_start();
+<?php
+
+    session_start();
+    if(@$_SESSION['u_id']){
+        header('location: index');
+    }else{
+        
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -47,6 +52,7 @@
                 exit();
             }
         }
+    
         
 
     ?>
@@ -91,7 +97,12 @@
         ?>
         <!--  -->
     </div>
+    
 
     <script src="files/pro/js/pro.js"></script>
+
+    <?php
+    }
+    ?>
 </body>
 </html>

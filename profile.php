@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="files/pro/css/pro.css">
     <link rel="stylesheet" href="layout/css/profile.css">
     <?php
@@ -20,14 +21,136 @@
     <title><?php echo $fetch_user['f_name'] . ' ' . $fetch_user['l_name'] ?></title>
 </head>
 <body>
-    
-    <?php
-        session_start();
 
-    ?>
 
     <div class="container root">
-        Test
+        <div class="row">
+            <div class="col-2">
+                <div class="left-side">
+                    <div class="header">
+                        <div class="header__img">
+                            <div class="img">
+                                <img src="./assets/uploads/profiles/<?php echo $fetch_user['user_avatar'] ?>" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="header__name">
+                            <div class="name">
+                                <?php echo $fetch_user['f_name']. ' ' .$fetch_user['l_name'] ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content__user-bio">
+                            <div class="bio__title">
+                                <div class="title">
+                                    About :
+                                </div>
+                            </div>
+                            <div class="bio">
+                                <?php echo $fetch_user['user_bio'] ?>
+                            </div>
+                        </div>
+                        <div class="content__user-links">
+                            <div class="user-links">
+                                <!-- Check Facebook Link -->
+                                <?php
+                                    if(!empty($fetch_user['user_facebook'])){
+                                ?>
+                                    <a href="<?php echo $fetch_user['user_facebook'] ?>" class="user-link" target="_blank">
+                                        <span><i class="fa fa-facebook"></i></span>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
+
+                                <!-- Check Twitter Link -->
+                                <?php
+                                    if(!empty($fetch_user['user_twitter'])){
+                                ?>
+                                    <a href="<?php echo $fetch_user['user_twitter'] ?>" class="user-link" target="_blank">
+                                        <span><i class="fa fa-twitter"></i></span>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
+
+                                <!-- Check Instagram Link -->
+                                <?php
+                                    if(!empty($fetch_user['user_instagram'])){
+                                ?>
+                                    <a href="<?php echo $fetch_user['user_instagram'] ?>" class="user-link" target="_blank">
+                                        <span><i class="fa fa-instagram"></i></span>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
+
+                                <!-- Check LinkedIn Link -->
+                                <?php
+                                    if(!empty($fetch_user['user_linkedin'])){
+                                ?>
+                                    <a href="<?php echo $fetch_user['user_linkedin'] ?>" class="user-link" target="_blank">
+                                        <span><i class="fa fa-linkedin"></i></span>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="right-side">
+                    <div class="content">
+                        <div class="content__header">
+                            <div class="header">
+                                <div class="header__title">
+                                    <div class="title">
+                                        Projects
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__show">
+                            <div class="row">
+                                <?php
+                                    $select_projects = getData('*', 'projects', 'WHERE', "user_id='$u_id'");
+
+                                    while($fetch_projects = mysqli_fetch_array($select_projects)){
+                                ?>
+
+                                    <!-- Project Card -->
+                                    <div class="col-3">
+                                        <div class="project-card">
+                                            <div class="project__img">
+                                                <div class="img">
+                                                    <img src="./assets/uploads/projects/<?php echo $fetch_projects['project_cover'] ?>" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="project__info">
+                                                <div class="info__project-name">
+                                                    <?php echo $fetch_projects['project_name'] ?>
+                                                </div>
+                                                <div class="info__project-date">
+                                                    <span><?php echo $fetch_projects['project_date'] ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php
+                                    }
+                                ?>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="files/pro/js/pro.js"></script>
