@@ -1,6 +1,30 @@
+<?php
+    
+
+    $select_site_settings = getData('*', 'settings', 'WHERE', "id='1'");
+    $site_settings = mysqli_fetch_array($select_site_settings)
+    
+
+?>
+
+<!-- <style>
+    .navbar-link{
+        position: relative;
+    }
+
+    .navbar-link::before{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
+</style> -->
+
 <div class="navbar">
     <a href="index" class="navbar-logo">
-        A3maly
+        <?php echo $site_settings['site_title'] ?>
     </a>
     <div class="toggle-list" id="toggle-list__btn">
         <span class="bar"></span>
@@ -15,7 +39,7 @@
             <a href="#" class="link">Products</a>
         </li>
         <li class="navbar-link">
-            <a href="#" class="link">
+            <a href="login" class="link">
                 Login
             </a>
         </li>

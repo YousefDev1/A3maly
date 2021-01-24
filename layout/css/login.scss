@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
 
-    .signup-container{
+    .login-container{
         background-color: white;
         display: flex;
         padding: 10px 15px;
@@ -43,7 +43,7 @@
         transition: margin-top 5s;
         animation: signup 1.5s;
         overflow: hidden;
-        max-width: 800px;
+        width: 750px;
         
         @keyframes signup {
             0%{
@@ -73,7 +73,7 @@
             }
         }
 
-        .signup{
+        .login{
             width: 60%;
             display: flex;
             flex-direction: column;
@@ -111,7 +111,7 @@
                 margin-top: 25px;
                 padding: 10px;
 
-                .btn-signup{
+                .btn-login{
                     border: none;
                     outline: none;
                     background: linear-gradient(-135deg,$bgColor-1,$bgColor-2);
@@ -140,7 +140,7 @@
                 display: none
             }
 
-            .signup{
+            .login{
                 width: 100%;
             }
         }
