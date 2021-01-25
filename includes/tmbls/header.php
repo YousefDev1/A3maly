@@ -36,11 +36,10 @@
             <a href="index" class="link">Home</a>
         </li>
         <li class="navbar-link">
-            <a href="#" class="link">Products</a>
+            <a href="#" class="link">ُExplore</a>
         </li>
         <?php
-            session_start();
-            if(@!$_SESSION['u_id']){
+            if(@$_SESSION['u_id'] = ''){
         ?>
                 <li class="navbar-link">
                     <a href="login" class="link">

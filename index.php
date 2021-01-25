@@ -17,6 +17,9 @@
 </head>
 <body>
     
+    <?php
+        include $tmbl . "header.php";
+    ?>
     
 
     <div class="landing">
@@ -33,11 +36,20 @@
                     </p>
                 </div>
             </div>
-            <div class="left__btns">
-                <a href="signup" class="btn-signup">
-                    Signup
-                </a>
-            </div>
+            <?php
+            
+                if(@empty($_SESSION['u_id'])){
+            ?>
+                <div class="left__btns">
+                    <a href="signup" class="btn-signup">
+                        Signup
+                    </a>
+                </div>
+            <?php
+                }
+
+            ?>
+            
         </div>
         <div class="right">
             <div class="landing__img">

@@ -14,6 +14,9 @@
 <body>
     
     <?php
+    
+        include $tmbl . "header.php";
+
     session_start();
     if(@$_SESSION['u_id']){
         header('location: index');

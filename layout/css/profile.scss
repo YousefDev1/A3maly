@@ -22,9 +22,12 @@
 
 }
 
+body{
+    background-color: #EEEEEE;
+}
+
 .root{
     padding-top: 50px;
-    // background-color: #F2F2F2;
     
     .left-side{
         padding: 10px 5px;
@@ -123,6 +126,122 @@
                             transform: scale(1.20);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .right-side{
+        padding: 25px 5px;
+        
+        .content{
+            .content__header{
+                width: 100%;
+                margin-bottom: 25px;
+
+                .header__title{
+                    background-color: white;
+                    padding: 10px 25px;
+                    box-shadow: 0px 0px 5px rgba($color: #333333, $alpha: 0.1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .title{
+                        font-family: $en_font;
+                        font-weight: 700;
+                        font-size: 30px;
+                    }
+                }
+
+            }
+
+            .content__show{
+                padding: 10px 5px;
+
+                .row{
+                    .col-3{
+                        .project-card{
+                            background-color: white;
+                            overflow: hidden;
+                            border-radius: 2px;
+                            transition: box-shadow 0.3s;
+
+                            &:hover{
+                                box-shadow: 0px 0px 15px rgba($color: #333333, $alpha: 0.4);
+                            }
+                            .project__img{
+                                overflow: hidden;
+                                padding: 5px;
+
+                                .img{
+                                    overflow: hidden;
+                                    width: 100%;
+                                    max-height: 200px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    img{
+                                        max-height: 200px;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+
+                            .project__info{
+                                padding: 15px 5px;
+                                font-family: $en_font;
+                                position: relative;
+
+                                .info__project-name{
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    width: 100%;
+                                    padding-left: 5px;
+                                    
+                                    a{
+                                        color: black;
+                                        text-decoration: none;
+                                    }
+                                }
+
+                                .info__project-date{
+                                    font-size: 15px;
+                                    color: #BFBFBF;
+                                    width: fit-content;
+                                    position: absolute;
+                                    right: 10px;
+                                    bottom: 0px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            
+                .empty-projects{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 50px;
+
+                    img{
+                        max-width: 450px;
+
+                        @media (max-width: 650px) {
+                            max-width: 250px;
+                        }
+
+                        
+                        @media (max-width: 500px) {
+                            max-width: 250px;
+                        }
+                    }
+
                 }
             }
         }

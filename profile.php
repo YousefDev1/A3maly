@@ -22,6 +22,9 @@
 </head>
 <body>
 
+    <?php
+        include $tmbl . "header.php";
+    ?>
 
     <div class="container root">
         <div class="row">
@@ -105,47 +108,61 @@
                 <div class="right-side">
                     <div class="content">
                         <div class="content__header">
-                            <div class="header">
-                                <div class="header__title">
-                                    <div class="title">
-                                        Projects
-                                    </div>
+                            <div class="header__title">
+                                <div class="title">
+                                    Projects
                                 </div>
                             </div>
                         </div>
                         <div class="content__show">
-                            <div class="row">
-                                <?php
-                                    $select_projects = getData('*', 'projects', 'WHERE', "user_id='$u_id'");
+                            <?php
+                                $select_projects = getData('*', 'projects', 'WHERE', "user_id='$u_id'");
+                                $count_projects  = mysqli_num_rows($select_projects);
 
-                                    while($fetch_projects = mysqli_fetch_array($select_projects)){
-                                ?>
+                                if($count_projects > 0){
+                            ?>
+                                    <div class="row">
+                                        <?php
 
-                                    <!-- Project Card -->
-                                    <div class="col-3">
-                                        <div class="project-card">
-                                            <div class="project__img">
-                                                <div class="img">
-                                                    <img src="./assets/uploads/projects/<?php echo $fetch_projects['project_cover'] ?>" alt="">
+                                                while($fetch_projects = mysqli_fetch_array($select_projects)){
+                                        ?>
+
+                                                <!-- Project Card -->
+                                                <div class="col-3">
+                                                    <div class="project-card">
+                                                        <div class="project__img">
+                                                            <div class="img">
+                                                                <img src="./assets/uploads/projects/<?php echo $fetch_projects['project_cover'] ?>" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="project__info">
+                                                            <div class="info__project-name">
+                                                                <a href="project?project_id=<?php echo $fetch_projects['project_id'] ?>">
+                                                                    <?php echo $fetch_projects['project_name'] ?>
+                                                                </a>
+                                                            </div>
+                                                            <span class="info__project-date"><?php echo $fetch_projects['project_date'] ?></span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="project__info">
-                                                <div class="info__project-name">
-                                                    <?php echo $fetch_projects['project_name'] ?>
-                                                </div>
-                                                <div class="info__project-date">
-                                                    <span><?php echo $fetch_projects['project_date'] ?></span>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        <?php
+                                                }
+                                        ?>
+                                    
                                     </div>
 
-                                <?php
-                                    }
-                                ?>
-                                
-
-                            </div>
+                            <?php
+                                }else{
+                            ?>
+                            
+                                    <div class="empty-projects">
+                                        <img src="./assets/imgs/empty.svg" alt="" srcset="">
+                                    </div>
+                            
+                            <?php
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
