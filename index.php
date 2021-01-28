@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="files/pro/css/pro.css">
     <link rel="stylesheet" href="layout/css/style.css">
+    <link rel="stylesheet" href="">
     <?php
         require "init.php";
 
@@ -59,5 +60,10 @@
     </div>
 
     <script src="files/pro/js/pro.js"></script>
+
+    <?php include $tmbl . "footer.php"; ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 </body>
 </html>

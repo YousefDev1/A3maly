@@ -6,3 +6,4 @@
     $tmbl = "includes/tmbls/";
 
     include $func . "functions.php";
+    
